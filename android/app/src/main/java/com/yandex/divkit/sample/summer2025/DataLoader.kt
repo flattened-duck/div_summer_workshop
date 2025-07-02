@@ -45,6 +45,6 @@ internal object DataLoader {
             return null
         }
 
-        return null // TODO: Create DivData from responseJson
+        return createDivData(responseJson)
     }
 }
