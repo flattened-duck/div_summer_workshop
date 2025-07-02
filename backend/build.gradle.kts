@@ -26,6 +26,9 @@ dependencies {
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     implementation("org.springframework.boot:spring-boot-starter-web")
+
+    // DivKit
+    implementation("com.yandex.div:kotlin-json-builder:30.15.0")
 }
 
 kotlin {
