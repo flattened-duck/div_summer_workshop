@@ -1,4 +1,5 @@
 import Foundation
+import DivKit
 
 class PlaygroundModel: ObservableObject {
   @Published var jsonData: Data?
@@ -12,7 +13,7 @@ class PlaygroundModel: ObservableObject {
           jsonData = data
         }
       } catch {
-        print("Error on loading json: \(error.localizedDescription)")
+        DivKitLogger.error("Error on loading json: \(error.localizedDescription)")
       }
     }
   }
@@ -28,6 +29,7 @@ class PlaygroundModel: ObservableObject {
     ]
 
     guard let url = urlComponents.url else {
+      // Обработка ошибки - URL не может быть создан
       throw URLError(.badURL)
     }
 
